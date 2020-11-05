@@ -16,7 +16,7 @@ public class RotationRandom : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         transform.Rotate(xRot,yRot,zRot, Space.Self);
     }
