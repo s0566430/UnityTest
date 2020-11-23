@@ -5,7 +5,10 @@ using UnityEngine;
 public class Behavior1 : MonoBehaviour
 {
     public Transform myPrefab;
+    public GameObject parent;
+    private Transform obj;
     private ArrayList spawns = new ArrayList();
+
 
     // Start is called before the first frame update
     void Start()
@@ -23,13 +26,14 @@ public class Behavior1 : MonoBehaviour
 
     void newCollectable() {
         seek_position:
-        Vector3 vec = new Vector3(UnityEngine.Random.Range(-5,5),1,UnityEngine.Random.Range(-5,5));
+        Vector3 vec = new Vector3(UnityEngine.Random.Range(-5,5)/100f,0.01f,UnityEngine.Random.Range(-5,5)/100f);
         foreach (Vector3 listVec in spawns) {
             if (listVec.Equals(vec)) {
                 goto seek_position;
             }
         }
         spawns.Add(vec);
-        Instantiate(myPrefab, vec, new Quaternion(0,0,0,1));
+        obj = Instantiate(myPrefab, vec, new Quaternion(0,0,0,1));
+        obj.parent = parent.transform;
     }
 }

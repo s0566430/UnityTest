@@ -20,7 +20,7 @@ public class PlayerMotionInput : MonoBehaviour
         if (Input.GetKey("q")) rotation++;
         if (Input.GetKey("e")) rotation--;
 
-        transform.Translate(new Vector3(moveHorizontal/10f, 0f, moveVertical/10f));
+        transform.Translate(new Vector3(moveHorizontal/1000f, 0f, moveVertical/1000f));
         transform.Rotate(0F,rotation,0F,Space.Self);
     }
 
