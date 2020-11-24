@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 public class PlayerMotionInput : MonoBehaviour
 {
-    public Transform transform;
-    
     // Start is called before the first frame update
     void Start()
     {

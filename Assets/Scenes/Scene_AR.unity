@@ -467,7 +467,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df5ece357ebc1df5bd7f79942e5ecd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transform: {fileID: 1133562593}
 --- !u!65 &1133562590
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -617,7 +616,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _trackedImageManager: {fileID: 1505960110}
-  _content: {fileID: 1133562587}
+  _content: {fileID: 678271878}
 --- !u!1 &1739455197
 GameObject:
   m_ObjectHideFlags: 0
