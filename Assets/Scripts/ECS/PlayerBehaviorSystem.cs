@@ -7,7 +7,6 @@ using Unity.Mathematics;
 
 public class PlayerBehaviorSystem : SystemBase
 {
-
     protected override void OnUpdate()
     {
         Entities.WithoutBurst().ForEach((ref PlayerComponent player, ref Translation translation, ref Rotation rotation) =>
