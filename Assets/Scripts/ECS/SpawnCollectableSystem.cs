@@ -8,6 +8,7 @@ using Unity.Mathematics;
 public class SpawnCollectableSystem : SystemBase
 {
     public BeginInitializationEntityCommandBufferSystem m_EntityCommandBufferSystem;
+    private static Unity.Mathematics.Random rand = new Unity.Mathematics.Random(43523);
 
     protected override void OnCreate()
     {
@@ -21,7 +22,7 @@ public class SpawnCollectableSystem : SystemBase
         {
             for (int i=0; i<spawnCollectable.count; i++) {
                 Entity e = commandBuffer.Instantiate(spawnCollectable.entity);
-                commandBuffer.SetComponent(e, new Translation { Value = new float3 (UnityEngine.Random.Range(-5,5),1,UnityEngine.Random.Range(-5,5)) });
+                commandBuffer.SetComponent(e, new Translation { Value = new float3(rand.NextInt(-5,5),1,rand.NextInt(-5,5)) });
             }
             commandBuffer.DestroyEntity(entity);
         }).Run();

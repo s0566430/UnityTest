@@ -4,7 +4,7 @@ using UnityEngine;
 using Unity.Entities;
 
 [GenerateAuthoringComponent]
-public class CollectedComponent : IComponentData
+public struct CollectedComponent : IComponentData
 {
     public bool isCollected;
 }
