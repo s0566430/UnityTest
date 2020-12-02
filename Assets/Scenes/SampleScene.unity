@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 562261806}
   - component: {fileID: 562261805}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef866a94d9aa6bc77ae8dc096462ce1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  count: 10
+  count: 1
   entity: {fileID: 8159730554482219247, guid: 3e684b656995ac2a987d00871f66f737, type: 3}
 --- !u!4 &562261807
 Transform:

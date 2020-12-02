@@ -8,7 +8,7 @@ using Unity.Mathematics;
 public class SpawnCollectableSystem : SystemBase
 {
     public BeginInitializationEntityCommandBufferSystem m_EntityCommandBufferSystem;
-    private static Unity.Mathematics.Random rand = new Unity.Mathematics.Random(43523);
+    private static Unity.Mathematics.Random rand = new Unity.Mathematics.Random((uint) UnityEngine.Random.Range(0,1000));
 
     protected override void OnCreate()
     {
